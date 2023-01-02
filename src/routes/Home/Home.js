@@ -1,46 +1,86 @@
 import {motion, useMotionValue, useScroll, useTransform, useViewportScroll} from "framer-motion";
 import {
     Black,
-    Cursor,
+    Cursor, Footer,
     Intro,
     Intro2,
     Main,
     Mark, Project1, ProjectGrid, ProjectIntro,
     Projects, ScrollZoom,
-    SecondIntro, Selection,
+    SecondIntro, Selection, Talk,
 
 } from "./Home.styles";
-import {Navbar} from "../../components/Navbar/Navbar";
-import React from "../../Assest/images/react.png";
-import Typewriter from "typewriter-effect";
 import Screen1 from "../../Assest/images/Harkins/screen1.png"
 import Screen2 from "../../Assest/images/Harkins/screen2.png"
 import Screen3 from "../../Assest/images/Harkins/screen3.png"
+import Screen4 from "../../Assest/images/Harkins/harkinMobile.png"
+import Vac1 from "../../Assest/images/vaclab/vac1.png"
+import Vac2 from "../../Assest/images/vaclab/vac2.png"
+import Vac3 from "../../Assest/images/vaclab/vac3.png"
+import Vac4 from "../../Assest/images/vaclab/vac4.png"
+import VacMobile from "../../Assest/images/vaclab/vacMobile.png"
+import Msg1 from "../../Assest/images/messenger/mes1.png"
+import Msg2 from "../../Assest/images/messenger/mes2.png"
+import Msg3 from "../../Assest/images/messenger/mes3.png"
+import trip1 from "../../Assest/images/trip/trip1.png"
+import trip2 from "../../Assest/images/trip/trip2.png"
+import trip3 from "../../Assest/images/trip/trip3.png"
+import Exp1 from "../../Assest/images/expense/exp1.png"
+import Exp2 from "../../Assest/images/expense/exp2.png"
+import Exp3 from "../../Assest/images/expense/exp3.png"
+import Shop1 from "../../Assest/images/shop/shop1.png"
+import Shop2 from "../../Assest/images/shop/shop2.png"
+import Shop3 from "../../Assest/images/shop/shop3.png"
+import {Navbar} from "../../components/Navbar/Navbar";
+import React from "../../Assest/images/react.png";
+import Typewriter from "typewriter-effect";
 import Cartoon1 from "../../Assest/images/cartoon.jpg"
 import Cartoon2 from "../../Assest/images/Cartoon2.jpg"
 import Ui from "../../Assest/images/ui.jpg"
 import {useEffect, useRef, useState} from "react"
 import {ProjectCard} from "../../components/project card/ProjectCard";
+import {Link} from "react-router-dom";
 
 
 
 
 export const Home =()=>{
     const intoRef=useRef(null)
-    const {scrollY} = useViewportScroll()
-    const scaleRight = useTransform(scrollY, [0, 500], [2, 1]);
-    const yRight = useTransform(scrollY, [0, 500], ["25vh", "0vh"]);
-    const xRight = useTransform(scrollY, [0, 500], ["-25vw", "0vw"]);
     const {scrollYProgress} = useScroll({
         target:intoRef,
-        offset:["start end", "end center"]
+        offset:["end end", "end center"]
     })
-    const x = useTransform(scrollYProgress,[0,1],["0%","15%"])
+    const x = useTransform(scrollYProgress,[0,1],["0%","150%"])
     const [mousePosition, setMousePosition] = useState({
         x:0,
         y:0
     })
     const [cursorVariant, setCursorVariant] = useState("default")
+
+     const projects=[
+        {
+            img:[`${Screen1}`,`${Screen2}`,`${Screen3}`,`${Screen4}` ],
+            title: "Harkins movie app",
+            description: "A movie trailer site that gives information on the latest movies, and tv shows. " +
+                "get access to movie trailer and clips. Built with React, Firebase, TMDB etc...",
+        },
+        {
+            img:[`${Vac1}`,`${Vac2}`,`${Vac4}`,`${VacMobile}` ],
+            title: "Vaclab",
+            description: "A movie trailer site that gives information on the latest movies, and tv shows. " +
+                "get access to movie trailer and clips. Built with React, Firebase, TMDB etc...",
+        },
+        {
+            img:[`${Screen1}`,`${Screen2}`,`${Screen3}` ],
+            title: "Harkins movie app",
+            description: "A movie trailer site that gives information on the latest movies, and tv shows. " +
+                "get access to movie trailer and clips. Built with React, Firebase, TMDB etc...",
+        },
+        {
+            img:[`${Screen1}`,`${Screen2}`,`${Screen3}` ],
+            title: "Harkins movie app"
+        },
+    ]
 
     useEffect(()=>{
         const mouseMove=(e)=>{
@@ -71,7 +111,7 @@ export const Home =()=>{
             width: 150,
             x:mousePosition.x - 75,
             y:mousePosition.y -75,
-            backgroundColor: "var(--green)",
+            backgroundColor: "white",
             mixBlendMode:"difference",
         },
         color:{
@@ -96,24 +136,7 @@ export const Home =()=>{
             zIndex:10
         }
     }
-    const projects=[
-        {
-            img:`${Screen1}`,
-            title: "Harkins movie app"
-        },
-        {
-            img:`${Screen2}`,
-            title: "Harkins movie app"
-        },
-        {
-            img:`${Screen2}`,
-            title: "Harkins movie app"
-        },
-        {
-            img:`${Screen2}`,
-            title: "Harkins movie app"
-        },
-    ]
+
 
     const textEnter=()=>{
         setCursorVariant("text")
@@ -165,7 +188,7 @@ export const Home =()=>{
                     FRONT END DEVELOPER | GRAPHICS DESIGNER | VIDEOGRAPHY | SEARCH ENGINE OPTIMIZATION
                 </marquee>
             </Mark>
-            <SecondIntro ref={intoRef}  onMouseEnter={textWithout} onMouseLeave={textLeave}>
+            <SecondIntro ref={intoRef}onMouseEnter={textWithout} onMouseLeave={textLeave}>
                 <motion.div style={{x}}>
                     <Intro2 >
                         Frontend developer <span><img src={Cartoon1}/></span> who cares deeply about user experience
@@ -182,42 +205,64 @@ export const Home =()=>{
                         </div>
                         <p>If you think good design is expensive, you should try out the cost of bad design.</p>
                     </div>
-                    <Selection>
+                   {/* <Selection>
                         <div><p>Web applications</p></div>
                         <div><p>Graphics design</p></div>
                         <div><p>Writing</p></div>
                         <div><p>SEO</p></div>
-                    </Selection>
+                    </Selection>*/}
                 </ProjectIntro>
-                <ScrollZoom>
-
-                    <div
-                        style={{
-                            height: "110vh",
-                            display: "flex",
-                            position: "sticky",
-                            top: "0px",
-                        }}
-                    >
-                        <motion.div className="child" style={{ height: "100%", width: "50vw" }}>
-                            <h2>Slide In </h2>
-                        </motion.div>
-                        <motion.div
-                            className="child"
-                            style={{
-                                height: "100%",
-                                width: "50vw",
-                                scale: scaleRight,
-                                y: yRight,
-                                x: xRight,
-                            }}
-                        >
-                            <h2>Scroll Down to Zoom Out</h2>
-                        </motion.div>
-                    </div>
-                </ScrollZoom>
+                <div onMouseEnter={textWhite} onMouseLeave={textLeave}>
+                    <ProjectCard image={[Screen1,Screen2,Screen3,Screen4]}
+                                 title={"Harkins movie app"}
+                                 description={"A movie trailer site that gives information on the latest movies, and tv shows. " +
+                                     "get access to movie trailer and clips. Built with React, Firebase, TMDB etc..."}
+                    />
+                    <ProjectCard image={[Vac1,Vac2,Vac3,VacMobile]}
+                                 title={"Vaclab"}
+                                 description={"A movie trailer site that gives information on the latest movies, and tv shows. " +
+                                     "get access to movie trailer and clips. Built with React, Firebase, TMDB etc..."}
+                    />
+                    <ProjectCard
+                        image={[Msg1,Msg2,Msg3]}
+                        title={"Messenger App"}
+                        description={"This is a messennger application that allows user to easily chat and connect with " +
+                            "other friends using the app."}
+                    />
+                    <ProjectCard
+                        image={[trip1,trip2,trip3]}
+                        title={"Trip Global"}
+                        description={"Freelance work done for a logistic company in need of online presence."}
+                    />
+                    <ProjectCard
+                        image={[Exp1,Exp2,Exp3]}
+                        title={"Expensify"}
+                        description={"Shopping list web app to easily track your shopping item while being able" +
+                            "to categorize them."}
+                    />
+                    <ProjectCard
+                        image={[Shop1,Shop2,Shop3]}
+                        title={"Kings Collection"}
+                        description={"An ecommerce clothing site. Built using react, redux, and firebase"}
+                    />
+                </div>
 
             </Projects>
+
+            <Footer>
+                <div>
+                    <div>
+                        <h4>Let's discuss your ideas</h4>
+
+                            <Talk to={"/contact"}>Talk now</Talk>
+                    </div>
+                    <div>
+                        <a target={"_blank"} href={"https://twitter.com/i_vamaa"} ><img src={"https://cdn-icons-png.flaticon.com/512/2168/2168336.png"} alt={"twitter"}/></a>
+                        <a target={"_blank"} href={"https://www.instagram.com/i_v.amaa/"}><img src={"https://cdn-icons-png.flaticon.com/512/1384/1384015.png"}/></a>
+                    </div>
+                </div>
+
+            </Footer>
 
         </Main>
 

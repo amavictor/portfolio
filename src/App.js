@@ -7,9 +7,8 @@ import {AnimatedLayout} from "./layout/AnimatedLayout";
 function App() {
 
   return (
-      <>
-          <AnimatedLayout/>
-      </>
+
+      <AnimatedLayout/>
 
   );
 }

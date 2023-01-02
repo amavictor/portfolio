@@ -8,7 +8,7 @@ body,html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding:0;
-  background-color: var(--green);
+  background-color: white;
 }
 *{
   margin: 0;
@@ -30,7 +30,7 @@ body,html {
 
 :root{
   --green: #C0E218;
-  --black: #020e02;
+  --black: #061106;
 
 }
 
@@ -39,7 +39,7 @@ code {
     monospace;
 }
 
-h1,h2,h3,h4,h5,h6,ul,li,p{
+h1,h2,h3,h4,h5,h6,ul,li,p,label,input,textarea{
   font-family: 'Be Vietnam Pro', sans-serif;
   line-height: 1;
 }
@@ -64,3 +64,13 @@ h1,h2,h3,h4,h5,h6,ul,li,p{
   flex-direction: column;
   background-color: red;
 }
+a{
+  text-decoration: none;
+}
+a.active{
+  color: var(--green);
+}
+a{
+  color: var(--black);
+}
+

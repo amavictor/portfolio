@@ -6,7 +6,7 @@ export const Navigation = styled(motion.nav)`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  background-color: transparent;
   h1{
     font-size: 1.5rem;
     font-weight: 600;
@@ -25,6 +25,11 @@ export const Navigation = styled(motion.nav)`
       align-items: center;
       justify-content: center;
       gap: 20px;
+      
+      li{
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
     }
   }
   
@@ -32,7 +37,7 @@ export const Navigation = styled(motion.nav)`
 export const Circle =styled(motion.div)`
   width: 13px;
   height: 13px;
-  background-color: green;
+  background-color: var(--green);
   border-radius: 50%;
   margin-left: -15px;
   margin-top: 5px;

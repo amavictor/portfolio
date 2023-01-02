@@ -3,7 +3,9 @@ import {motion} from "framer-motion";
 import {waitForElementToBeRemoved} from "@testing-library/react";
 
 export const HomeBackground=styled(motion.div)`
+  /*
   background-color: aliceblue;
+  */
   height: 100vh;
   width: 100vw;
   color:black ;
@@ -32,6 +34,7 @@ export const Landing2 = styled(motion.div)`
   align-items: center;
   justify-content: center;
   position: relative;
+  top: 70px;
 `
 
 
@@ -62,7 +65,7 @@ const jelly = keyframes`
 
 export const WaterBall = styled(motion.div)`
   z-index: 4;
-  top: 0;
+  top: 50px;
   left: 40%;
   position:absolute;
   width:100px;
@@ -158,4 +161,72 @@ export const WaterBall8 = styled(WaterBall)`
   img{
     filter: blur(1px);
   }
+`
+export const AboutSection = styled.section`
+  padding: 5%;
+  background-color: var(--black);
+  color: white;
+
+  code {
+    width: 70%;
+    font-size: 2rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 4rem;
+    color: var(--green);
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  h6 {
+    font-size: 2rem;
+    color: var(--green);
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  aside {
+    text-align: center;
+
+    p {
+      width: 70%;
+      margin: 5% auto;
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+  }
+
+
+`
+
+export const Stack = styled.aside`
+  display: flex;
+  gap: 30px;
+`
+
+export const ButtonCase = styled.footer`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  padding-bottom: 10%;
+  button {
+    background-color: #464646;
+    font-size: 2rem;
+    color: white;
+    padding: 1% 2%;
+    border-radius: 30px;
+    transition: all .2s ease-in-out;
+    margin: auto;
+
+    &:hover {
+      background-color: #363636;
+      cursor: pointer;
+    }
+  }
+  
 `
