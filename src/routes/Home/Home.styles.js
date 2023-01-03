@@ -4,11 +4,11 @@ import Background from "../../Assest/images/background.jpg"
 import {Link} from "react-router-dom";
 
 
-export  const Main = styled(motion.main)`
+export const Main = styled(motion.main)`
   overflow-x: hidden;
   cursor: none;
 `
-export const Mark=styled.div`
+export const Mark = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,34 +18,39 @@ export const Mark=styled.div`
   margin-left: -30px;
   position: relative;
   /*transform: rotate(350deg);*/
-  &::before{
+
+  &::before {
     content: "";
     width: 50%;
     height: 100%;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background-color: white;
     mix-blend-mode: difference;
     pointer-events: none;
     z-index: 2;
   }
-  &::after{
+
+  &::after {
     content: "";
     width: 50%;
     height: 100%;
     position: absolute;
-    top:0;
-    right:0;
+    top: 0;
+    right: 0;
     background-color: var(--black);
     pointer-events: painted;
     z-index: -1;
   }
-  marquee{
+
+  marquee {
     font-size: 4rem;
     font-weight: 700;
     color: var(--black);
-    
+    @media only screen and (max-width: 800px) {
+      font-size: 3rem;
+    }
   }
 `
 export const Intro = styled.section`
@@ -55,16 +60,27 @@ export const Intro = styled.section`
   height: 90vh;
   text-align: center;
   background-color: white;
-  div{
+
+  div {
     width: 67.2%;
+
+    @media only screen and (max-width: 800px) {
+      width: 100%;
+    }
   }
-  h1{
+
+  h1 {
     font-size: 7rem;
     font-weight: 700;
     margin-left: 16%;
     width: 100%;
+    @media only screen and (max-width: 800px) {
+      font-size: 6rem;
+      margin-left: 0;
+    }
   }
-  h2{
+
+  h2 {
     font-size: 3rem;
     font-weight: 400;
   }
@@ -84,26 +100,39 @@ export const Intro2 = styled(motion.h3)`
   text-transform: uppercase;
   text-align: justify;
   text-justify: inter-word;
-  span{
-    img{
+
+  span {
+    img {
       width: 100px;
       height: 50px;
       border-radius: 10px;
       object-fit: cover;
+      @media only screen and (max-width: 800px) {
+        width: 50px;
+        height: 25px;
+      }
+
+
     }
   }
-  
+
+  @media only screen and (max-width: 800px) {
+    font-size: 2rem;
+    text-align:left;
+  }
+
 `
-export const SecondIntro =styled(motion.section)`
+export const SecondIntro = styled(motion.section)`
   width: 100%;
   padding: 5% 5%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: white;
   background-color: var(--black);
+  @media only screen and (max-width: 800px) {
+    padding: 30% 5%;
+  }
 
   div {
     width: 100%;
@@ -114,17 +143,24 @@ export const SecondIntro =styled(motion.section)`
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+
+    @media only screen and (max-width: 800px) {
+      padding: 5px;
+      width: 100vw;
+      height: 80vh;
+    }
   }
 
 `
 export const Projects = styled.section`
   height: fit-content;
-  h4{
+
+  h4 {
     font-size: 10rem;
     font-weight: 600;
     color: white;
   }
-  
+
 `
 export const Cursor = styled(motion.aside)`
   background-color: #111;
@@ -135,7 +171,7 @@ export const Cursor = styled(motion.aside)`
   top: 0;
   left: 0;
   pointer-events: none;
-  `
+`
 export const ProjectIntro = styled.div`
   background-image: url("${Background}");
   min-height: 50vh;
@@ -146,24 +182,40 @@ export const ProjectIntro = styled.div`
   margin: 0 !important;
   padding: 10% 5%;
 
-  &>div{
+  & > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 200px;
+    
+    @media only screen and (max-width: 800px) {
+      flex-wrap: wrap;
+      padding-top: 60px;
+      gap: 50px;
+      justify-content: center;
+    }
   }
-  p{
+
+  p {
     color: gray;
     font-size: 2rem;
+    @media only screen and (max-width: 800px) {
+      font-size: 1.3rem;
+      text-align: center;
+    }
   }
-  
-  
-  h3{
+
+
+  h3 {
     color: white;
     font-size: 7rem;
+    @media only screen and (max-width: 800px) {
+      font-size: 3rem;
+      text-align: center;
+    }
   }
-  
-  span{
+
+  span {
     width: 50px;
     height: 50px;
     background-color: var(--green);
@@ -175,9 +227,9 @@ export const ProjectIntro = styled.div`
 export const Project1 = styled.div`
   width: 100%;
   height: 300vh;
-  background-color: gray; 
-  
-  
+  background-color: gray;
+
+
 `
 export const Selection = styled.section`
   width: 100%;
@@ -194,7 +246,8 @@ export const Selection = styled.section`
 
     &:hover {
       border: 1.5px solid white;
-      p{
+
+      p {
         color: white;
       }
     }
@@ -210,7 +263,7 @@ export const Selection = styled.section`
 export const ProjectGrid = styled.div`
   background-color: var(--black);
   padding: 0 5%;
-  
+
 `
 export const ScrollZoom = styled.div`
   width: 100vw;
@@ -237,12 +290,13 @@ export const Footer = styled.footer`
       display: flex;
       flex-direction: column;
     }
-    div:last-child{
+
+    div:last-child {
       display: flex;
       justify-content: center;
       align-items: center;
-      
-      img{
+
+      img {
         width: 70px;
         height: 70px;
         display: inline-block;
@@ -255,20 +309,20 @@ export const Footer = styled.footer`
       width: 80%;
       margin-bottom: 100px;
     }
-    
+
   }
 `
 export const Talk = styled(Link)`
-  
-    background-color: var(--black);
-    font-size: 2rem;
-    color: var(--green);
-    padding: 1% 2%;
-    border-radius: 30px;
-    transition: all .2s ease-in-out;
 
-    &:hover {
-      background-color: #363636;
-    }
+  background-color: var(--black);
+  font-size: 2rem;
+  color: var(--green);
+  padding: 1% 2%;
+  border-radius: 30px;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: #363636;
+  }
 
 `

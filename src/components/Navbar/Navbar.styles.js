@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import {motion} from "framer-motion";
+import MenuIcon from '@mui/icons-material/Menu';
 export const Navigation = styled(motion.nav)`
   padding: 0 5%;
   height: 10vh;
@@ -7,6 +8,7 @@ export const Navigation = styled(motion.nav)`
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  flex-wrap:wrap;
   h1{
     font-size: 1.5rem;
     font-weight: 600;
@@ -19,12 +21,22 @@ export const Navigation = styled(motion.nav)`
     width: 100%;
     list-style: none;
    
+    section{
     
+     display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
     div{
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 20px;
+      
+       @media only screen and (max-width: 912px){
+          display:none;
+        }
       
       li{
         font-size: 1.2rem;
@@ -41,4 +53,9 @@ export const Circle =styled(motion.div)`
   border-radius: 50%;
   margin-left: -15px;
   margin-top: 5px;
+`
+
+export const Menu= styled(MenuIcon)`
+    width: 4rem;
+    height: 4rem;
 `

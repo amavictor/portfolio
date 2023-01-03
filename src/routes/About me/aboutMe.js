@@ -144,7 +144,7 @@ export const AboutMe =()=>{
                                     duration: 3
                                 }}
                             >
-                                <img src={Javascript}/>
+                                <img alt={"javaScript"} src={Javascript}/>
                             </WaterBall>
                             <WaterBall2
                                 layout
@@ -160,7 +160,7 @@ export const AboutMe =()=>{
                                     duration: 3
                                 }}
                             >
-                                <img src={Html}/>
+                                <img alt={"HTML"} src={Html}/>
                             </WaterBall2>
                             <WaterBall3
                                 layout

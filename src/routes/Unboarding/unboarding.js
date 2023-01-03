@@ -16,6 +16,9 @@ export const UnboardingContainer = styled(motion.div)`
     font-size: 3rem;
     font-weight: 600;
     color: var(--green);
+   
+    @media only screen and (max-width: 768px){
+    font-size:2rem;
   }
 `
 export const Rest = styled(motion.div)`

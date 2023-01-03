@@ -13,6 +13,10 @@ export const Item = styled(motion.div)`
   display: flex;
   position: sticky;
   top: 0;
+  @media only screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    width: 100vw;
+  }
 
   div:first-child {
     width: 50%;
@@ -24,6 +28,10 @@ export const Item = styled(motion.div)`
       margin-bottom: 3%;
       text-align: justify;
       text-justify: inter-word;
+      @media only screen and (max-width: 800px) {
+        font-size: 2.5rem;
+          width: 100vw ;
+      }
     }
 
     p {
@@ -32,6 +40,10 @@ export const Item = styled(motion.div)`
       line-height: 1.3;
       font-weight: 400;
       width: 80%;
+      @media only screen and (max-width: 800px) {
+        font-size: 1.5rem;
+        width: 100vw;
+      }
     }
 
   }

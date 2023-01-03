@@ -1,4 +1,4 @@
-import {motion, useMotionValue, useScroll, useTransform, useViewportScroll} from "framer-motion";
+import {motion, useInView, useMotionValue, useScroll, useTransform, useViewportScroll} from "framer-motion";
 import {
     Black,
     Cursor, Footer,
@@ -185,15 +185,15 @@ export const Home =()=>{
 
             <Mark>
                 <marquee behavior={"scroll"} direction={"left"} scrollamount={"12"}>
-                    FRONT END DEVELOPER | GRAPHICS DESIGNER | VIDEOGRAPHY | SEARCH ENGINE OPTIMIZATION
+                    FRONT END DEVELOPER | GRAPHICS DESIGNER | VIDEO EDITOR | CROSS-PLATFORM MOBILE DEVELOPER
                 </marquee>
             </Mark>
-            <SecondIntro ref={intoRef}onMouseEnter={textWithout} onMouseLeave={textLeave}>
+            <SecondIntro ref={intoRef} onMouseEnter={textWithout} onMouseLeave={textLeave}>
                 <motion.div style={{x}}>
                     <Intro2 >
-                        Frontend developer <span><img src={Cartoon1}/></span> who cares deeply about user experience
-                        <span><img src={Ui}/></span> with a
-                        serious passion for graphics design and new technologies <span><img src={Cartoon2}/></span>.
+                        Frontend developer <span><img alt={"cartoon1"} src={Cartoon1}/></span> who cares deeply about user experience
+                        <span><img alt={"ui"} src={Ui}/></span> with a
+                        serious passion for graphics design and new technologies <span><img alt={"cartoon2"} src={Cartoon2}/></span>.
                     </Intro2>
                 </motion.div>
             </SecondIntro>
