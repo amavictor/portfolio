@@ -15,26 +15,12 @@ export const ProjectCard = ({image, title, description}) => {
             offset: ["start center", "end start"]
         },
     );
-    const [isMobile, setIsMobile] = useState(false)
 
     const rightScale = useTransform(scrollYProgress, [0, 3], [1, 4])
     const rightY = useTransform(scrollYProgress, [0, 1], ["0%", "280%"])
     const shiftLeft = useTransform(scrollYProgress, [0, 1.2], ["0%", "-60%"])
     const liftBox = useTransform(scrollYProgress, [0, 1.2], [1, 0])
     const leftOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0])
-
-    const handleMobileResize =()=>{
-        if(window.innerWidth <= 800){
-            setIsMobile(true)
-        }
-        else {
-            return null
-        }
-    }
-
-    useEffect(()=>{
-        window.addEventListener("resize",handleMobileResize)
-    },[])
 
     return (
         <CardBody>
@@ -67,21 +53,34 @@ export const ProjectCard = ({image, title, description}) => {
                     </p>
                 </motion.div>
 
-                <motion.div
-                    style={{
-                        scale: rightScale,
-                        y: rightY,
-                        x: shiftLeft,
-                    }}
-                >
-                    <a href="https://kingscollection.netlify.app/" target={"_blank"} rel="noreferrer">
+                {window.innerWidth<=800 ?
+                    <motion.div
+                    >
+                        <a href="https://kingscollection.netlify.app/" target={"_blank"} rel="noreferrer">
 
-                        {
-                            image.map((item,index) => <img id={index} alt={index} src={item}/>)
-                        }
-                    </a>
+                            {
+                                image.map((item,index) => <img id={index} alt={index} src={item}/>)
+                            }
+                        </a>
 
-                </motion.div>
+                    </motion.div>
+                    :
+                    <motion.div
+                        style={{
+                            scale: rightScale,
+                            y: rightY,
+                            x: shiftLeft,
+                        }}
+                    >
+                        <a href="https://kingscollection.netlify.app/" target={"_blank"} rel="noreferrer">
+
+                            {
+                                image.map((item,index) => <img id={index} alt={index} src={item}/>)
+                            }
+                        </a>
+
+                    </motion.div>
+                }
 
             </Item>
         </CardBody>

@@ -301,6 +301,10 @@ export const Footer = styled.footer`
         height: 70px;
         display: inline-block;
         margin-bottom: 5%;
+        @media only screen and (max-width: 800px) {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
 
@@ -308,6 +312,10 @@ export const Footer = styled.footer`
       font-size: 6rem;
       width: 80%;
       margin-bottom: 100px;
+      @media only screen and (max-width: 800px) {
+        font-size: 3rem;
+        margin-top: 30%;
+      }
     }
 
   }
@@ -320,6 +328,9 @@ export const Talk = styled(Link)`
   padding: 1% 2%;
   border-radius: 30px;
   transition: all .2s ease-in-out;
+  @media only screen and (max-width: 800px) {
+   font-size: 1.5rem;
+  }
 
   &:hover {
     background-color: #363636;

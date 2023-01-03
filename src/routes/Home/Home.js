@@ -257,8 +257,8 @@ export const Home =()=>{
                             <Talk to={"/contact"}>Talk now</Talk>
                     </div>
                     <div>
-                        <a target={"_blank"} href={"https://twitter.com/i_vamaa"} ><img src={"https://cdn-icons-png.flaticon.com/512/2168/2168336.png"} alt={"twitter"}/></a>
-                        <a target={"_blank"} href={"https://www.instagram.com/i_v.amaa/"}><img src={"https://cdn-icons-png.flaticon.com/512/1384/1384015.png"}/></a>
+                        <a target={"_blank"} href={"https://twitter.com/i_vamaa"} rel="noreferrer" ><img src={"https://cdn-icons-png.flaticon.com/512/2168/2168336.png"} alt={"twitter"}/></a>
+                        <a target={"_blank"} href={"https://www.instagram.com/i_v.amaa/"} rel="noreferrer"><img src={"https://cdn-icons-png.flaticon.com/512/1384/1384015.png"}/></a>
                     </div>
                 </div>
 

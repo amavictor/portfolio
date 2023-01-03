@@ -7,6 +7,9 @@ export const CardBody = styled.div`
   width:100%;
   background-color:var(--black);
   padding-top: 20%;
+  @media only screen and (max-width: 800px) {
+    height: 100vh;
+  }
 `
 export const Item = styled(motion.div)`
   height: 100vh;
@@ -79,9 +82,11 @@ export const Item = styled(motion.div)`
       -webkit-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       @media only screen and (max-width: 800px) {
-        width: 80%;
-        height: 100px;
-        object-fit: contain;
+        width: 90%;
+        height: 250px;
+        object-fit: cover;
+        margin: 0 auto;
+        object-position: left;
       }
       
     }
