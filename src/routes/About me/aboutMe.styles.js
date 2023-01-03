@@ -220,6 +220,10 @@ export const AboutSection = styled.section`
     color: var(--green);
     text-align: center;
     margin-top: 5%;
+    @media only screen and (max-width: 800px) {
+      margin-top: 40px;
+      font-size: 2rem;
+    }
   }
 
   h6 {
@@ -237,6 +241,10 @@ export const AboutSection = styled.section`
       margin: 5% auto;
       font-size: 2rem;
       line-height: 1.3;
+      @media only screen and (max-width: 800px) {
+        font-size: 1.3rem;
+       
+      }
     }
   }
 
@@ -246,6 +254,11 @@ export const AboutSection = styled.section`
 export const Stack = styled.aside`
   display: flex;
   gap: 30px;
+  margin-top: 30px;
+  
+  p{
+    
+  }
 `
 
 export const ButtonCase = styled.footer`
