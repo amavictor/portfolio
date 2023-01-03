@@ -255,9 +255,14 @@ export const Stack = styled.aside`
   display: flex;
   gap: 30px;
   margin-top: 30px;
+  @media only screen and (max-width: 800px) {
+    flex-wrap: wrap;
+  }
   
-  p{
-    
+  code{
+    @media only screen and (max-width: 800px) {
+      font-size: 1.3rem;
+    }
   }
 `
 
@@ -268,6 +273,7 @@ export const ButtonCase = styled.footer`
   justify-content: center;
   background-color: var(--black);
   padding-bottom: 10%;
+  
   button {
     background-color: #464646;
     font-size: 2rem;
@@ -276,6 +282,9 @@ export const ButtonCase = styled.footer`
     border-radius: 30px;
     transition: all .2s ease-in-out;
     margin: auto;
+    @media only screen and (max-width: 800px) {
+      font-size: 1.2rem;
+    }
 
     &:hover {
       background-color: #363636;
