@@ -35,6 +35,11 @@ export const Landing2 = styled(motion.div)`
   justify-content: center;
   position: relative;
   top: 70px;
+
+  @media only screen and (max-width: 800px) {
+    height: 75vh;
+  }
+  
 `
 
 
@@ -79,9 +84,19 @@ export const WaterBall = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 800px) {
+    width: 70px;
+    height: 70px;
+    left: 25%;
+    top: 30px;
+  }
   img{
     width: 50px;
     height: 50px;
+    @media only screen and (max-width: 800px) {
+      width: 30px;
+      height: 30px;
+    }
   }
   
   &::before{
@@ -111,6 +126,9 @@ export const WaterBall = styled(motion.div)`
 export const WaterBall2 = styled(WaterBall)`
   top:20%;
   left: 60%;
+  @media only screen and (max-width: 800px) {
+    left: 65%;
+  }
 `
 export const WaterBall3 = styled(WaterBall)`
   top:73%;
@@ -118,19 +136,30 @@ export const WaterBall3 = styled(WaterBall)`
   z-index: 0;
   img{
     filter: blur(3px);
+    @media only screen and (max-width: 800px) {
+      left: 60%;
+    }
   }
 `
 export const WaterBall4 = styled(WaterBall)`
-  top:61%;
+  top: 61%;
   left: 44%;
   z-index: 5;
-  box-shadow: inset 17px 30px 26px 0px #c3c3c3,
+  box-shadow: inset 17px 30px 26px 0 #c3c3c3,
   inset 1px 4px 32px 4px #ffffff;
+
+  @media only screen and (max-width: 800px) {
+    left: 40%;
+    top: 65%;
+  }
 `
 export const WaterBall5 = styled(WaterBall)`
   top:47%;
   left: 30%;
   z-index: 0;
+  @media only screen and (max-width: 800px) {
+    left: 20%;
+  }
   
 `
 
@@ -138,6 +167,10 @@ export const WaterBall6 = styled(WaterBall)`
   top:47%;
   left: 60%;
   z-index: 0;
+  @media only screen and (max-width: 800px) {
+    left: 57%;
+    top: 50%;
+  }
   img{
     object-fit: cover;
     width: 70px;
@@ -150,6 +183,10 @@ export const WaterBall7 = styled(WaterBall)`
   top:30%;
   left: 40%;
   z-index: 0;
+  @media only screen and (max-width: 800px) {
+    left:70%;
+    top:35%;
+  }
   img{
     filter: blur(1px);
   }
@@ -158,6 +195,10 @@ export const WaterBall8 = styled(WaterBall)`
   top:20%;
   left: 30%;
   z-index: 0;
+  @media only screen and (max-width: 800px) {
+    left: 23%;
+    top:27%
+  }
   img{
     filter: blur(1px);
   }

@@ -128,7 +128,7 @@ export const AboutMe =()=>{
                         <Navbar/>
                         <Landing>
                             <Landing2>
-                                <img src={Me}/>
+                                <img src={Me} alt={"me"}/>
                             </Landing2>
                             <WaterBall
                                 layout
