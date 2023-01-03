@@ -15,7 +15,6 @@ export const Item = styled(motion.div)`
   top: 0;
   @media only screen and (max-width: 800px) {
     flex-wrap: wrap;
-    width: 100vw;
   }
 
   div:first-child {
@@ -56,6 +55,11 @@ export const Item = styled(motion.div)`
     padding: 5% 5%;
     position: relative;
     transition: all 0.5s;
+    @media only screen and (max-width: 800px) {
+      width: 100%;
+      background-color: transparent;
+    }
+   
 
     &:hover {
       filter: brightness(80%);
@@ -74,6 +78,12 @@ export const Item = styled(motion.div)`
       box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       -webkit-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
+      @media only screen and (max-width: 800px) {
+        width: 80%;
+        height: 100px;
+        object-fit: contain;
+      }
+      
     }
 
     img:nth-child(2) {
@@ -86,6 +96,9 @@ export const Item = styled(motion.div)`
       box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       -webkit-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
+      @media only screen and (max-width: 800px) {
+        display: none;
+      }
     }
 
     img:nth-child(3) {
@@ -98,6 +111,9 @@ export const Item = styled(motion.div)`
       box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       -webkit-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
+      @media only screen and (max-width: 800px) {
+        display: none;
+      }
     }
 
     img:nth-child(4) {
@@ -109,6 +125,9 @@ export const Item = styled(motion.div)`
       box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       -webkit-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: -11px 13px 11px -7px rgba(0, 0, 0, 0.4);
+      @media only screen and (max-width: 800px) {
+        display: none;
+      }
     }
   }
 `
