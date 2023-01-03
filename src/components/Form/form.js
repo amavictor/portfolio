@@ -11,7 +11,7 @@ export const Form =()=>{
     return(
         <FormBody>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="email">
+                <label aria-label={"email"} htmlFor="email">
                     Email Address
                 </label>
                 <input

@@ -9,6 +9,9 @@ export const FormBody = styled.main`
   background-color: #061106;
   color: white;
   padding: 10% 5%;
+  @media only screen and (max-width: 800px) {
+    padding: 5% 2%;
+  }
 
   form {
     display: flex;
@@ -19,6 +22,9 @@ export const FormBody = styled.main`
       font-size: 1.3rem;
       font-weight: 500;
       margin: 10% 0;
+      @media only screen and (max-width: 800px) {
+        font-size: 0.8rem;
+      }
     }
 
     input {
@@ -31,7 +37,6 @@ export const FormBody = styled.main`
       color: white;
       font-size: 1.2rem;
       transition: all 0.3s ease-out;
-      
       &:focus{
         border: 2px solid var(--green) ;
       }
