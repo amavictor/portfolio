@@ -65,7 +65,6 @@ export const FormBody = styled.main`
       font-size: 1.3rem;
       color: white;
       padding: 3% 5%;
-      border-radius: 30px;
       transition: all .2s ease-in-out;
       margin: auto;
 

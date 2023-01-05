@@ -20,6 +20,7 @@ export const Navigation = styled(motion.nav)`
     justify-content: space-between;
     width: 100%;
     list-style: none;
+    flex-flow: row nowrap;
    
     section{
     
@@ -58,4 +59,8 @@ export const Circle =styled(motion.div)`
 export const Menu= styled(MenuIcon)`
     width: 4rem;
     height: 4rem;
+  display: none !important;
+  @media only screen and (max-width: 912px){
+    display: inline-block !important;
+  }
 `

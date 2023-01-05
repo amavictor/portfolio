@@ -3,7 +3,7 @@ import {
     AboutSection, ButtonCase,
     HomeBackground,
     Landing,
-    Landing2, Stack,
+    Landing2, Skill, Stack,
     WaterBall,
     WaterBall2,
     WaterBall3,
@@ -19,6 +19,8 @@ import React from "../../Assest/images/react.png";
 import Framer from "../../Assest/images/motion.png";
 import Styled from "../../Assest/images/styled.png";
 import Firebase from "../../Assest/images/firebase.png";
+import 'react-circular-progressbar/dist/styles.css';
+import {buildStyles, CircularProgressbarWithChildren} from "react-circular-progressbar";
 
 
 export const AboutMe =()=>{
@@ -128,7 +130,7 @@ export const AboutMe =()=>{
                         <Navbar/>
                         <Landing>
                             <Landing2>
-                                <img src={Me} alt={"me"}/>
+                                <img src={Me} alt={"me"} draggable={"false"}/>
                             </Landing2>
                             <WaterBall
                                 layout
@@ -282,11 +284,97 @@ export const AboutMe =()=>{
                     </aside>
                     <h5>Technologies I work with</h5>
                     <Stack>
-                        <p><code>JavaScript(ES6+)</code></p>
-                        <p><code>React</code></p>
-                        <p><code>React native</code></p>
-                        <p><code>Firebase</code></p>
-                        <p><code>Redux</code></p>
+                        <Skill>
+                            <CircularProgressbarWithChildren
+                                value={85}
+                                styles={buildStyles({
+                                    textColor: "red",
+                                    pathColor: "var(--green)",
+                                    trailColor: "gray"
+                                })}
+                            >
+                                {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+                                <img style={{ width: "50%", marginTop: -5 }} src={Javascript} alt="javaScript" />
+                            </CircularProgressbarWithChildren>
+                        </Skill>
+                        <Skill>
+                            <CircularProgressbarWithChildren
+                                value={80}
+                                styles={buildStyles({
+                                    textColor: "red",
+                                    pathColor: "var(--green)",
+                                    trailColor: "gray"
+                                })}
+                            >
+                                {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+                                <img style={{ width: "50%", marginTop: -5 }} src={React} alt="React" />
+                            </CircularProgressbarWithChildren>
+                        </Skill>
+                        <Skill>
+                            <CircularProgressbarWithChildren
+                                value={60}
+                                styles={buildStyles({
+                                    textColor: "red",
+                                    pathColor: "var(--green)",
+                                    trailColor: "gray"
+                                })}
+                            >
+                                {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+                                <img style={{ width: "50%", marginTop: -5 }} src={Firebase} alt="firebase" />
+                            </CircularProgressbarWithChildren>
+                        </Skill>
+                        <Skill>
+                            <CircularProgressbarWithChildren
+                                value={40}
+                                styles={buildStyles({
+                                    textColor: "red",
+                                    pathColor: "var(--green)",
+                                    trailColor: "gray"
+                                })}
+                            >
+                                {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+                                <img style={{ width: "70%", marginTop: -5, borderRadius: "70%" }} src={"https://icts.io/wp-content/uploads/2020/04/react-native.png"} alt="react native" />
+                            </CircularProgressbarWithChildren>
+                        </Skill>
+                        <Skill>
+                            <CircularProgressbarWithChildren
+                                value={80}
+                                styles={buildStyles({
+                                    textColor: "red",
+                                    pathColor: "var(--green)",
+                                    trailColor: "gray"
+                                })}
+                            >
+                                {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+                                <img style={{ width: "70%", marginTop: -5 }} src="https://i.pinimg.com/originals/71/f0/a4/71f0a4c41735f951f9823725ee42cf8a.png" alt="Redux" />
+                            </CircularProgressbarWithChildren>
+                        </Skill>
+                        <Skill>
+                            <CircularProgressbarWithChildren
+                                value={40}
+                                styles={buildStyles({
+                                    textColor: "red",
+                                    pathColor: "var(--green)",
+                                    trailColor: "gray"
+                                })}
+                            >
+                                {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+                                <img style={{ width: "70%", marginTop: -5 }} src="https://everyday.codes/wp-content/uploads/2019/12/og_image.png" alt="Graphql" />
+                            </CircularProgressbarWithChildren>
+                        </Skill>
+                        <Skill>
+                            <CircularProgressbarWithChildren
+                                value={90}
+                                styles={buildStyles({
+                                    textColor: "red",
+                                    pathColor: "var(--green)",
+                                    trailColor: "gray"
+                                })}
+                            >
+                                {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+                                <img style={{ width: "70%", marginTop: -5,  borderRadius: "70%" }} src={Styled} alt="Styled components" />
+                            </CircularProgressbarWithChildren>
+                        </Skill>
                     </Stack>
                     <h6>Check out my resume</h6>
                 </AboutSection>

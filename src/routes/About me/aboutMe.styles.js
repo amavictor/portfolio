@@ -241,6 +241,7 @@ export const AboutSection = styled.section`
       margin: 5% auto;
       font-size: 2rem;
       line-height: 1.3;
+      font-weight: lighter;
       @media only screen and (max-width: 800px) {
         font-size: 1.3rem;
        
@@ -253,18 +254,14 @@ export const AboutSection = styled.section`
 
 export const Stack = styled.aside`
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
-  margin-top: 30px;
-  @media only screen and (max-width: 800px) {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
+  margin: 10% 0;
   
-  code{
-    @media only screen and (max-width: 800px) {
-      font-size: 1.3rem;
-    }
-  }
 `
+
 
 export const ButtonCase = styled.footer`
   display: flex;
@@ -292,4 +289,14 @@ export const ButtonCase = styled.footer`
     }
   }
   
+`
+
+export const Skill = styled.div`
+  width: 150px;
+  height: 150px;
+  @media only screen and (max-width: 912px) {
+    width: 100px;
+    height: 100px;
+  }
+
 `
