@@ -12,7 +12,6 @@ export const Navigation = styled(motion.nav)`
   h1{
     font-size: 1.5rem;
     font-weight: 600;
- 
   }
   ul{
     display: flex;
@@ -57,7 +56,6 @@ export const Links = styled.div`
 
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 20px;
       
       ${
@@ -82,7 +80,9 @@ export const Links = styled.div`
       li {
             font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 40px;
+            @media only screen and (max-width: 912px){
+                  margin-bottom: 40px;
+            }
       }
 
       @media only screen and (max-width: 912px) {
