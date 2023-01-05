@@ -14,11 +14,13 @@ export const ProjectCard = ({image, title, description, link}) => {
         },
     );
 
+
     const rightScale = useTransform(scrollYProgress, [0, 3], [1, 4])
     const rightY = useTransform(scrollYProgress, [0, 1], ["0%", "280%"])
     const shiftLeft = useTransform(scrollYProgress, [0, 1.2], ["0%", "-60%"])
     const liftBox = useTransform(scrollYProgress, [0, 1.2], [1, 0])
     const leftOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0])
+
 
     return (
         <CardBody>

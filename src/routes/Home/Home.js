@@ -242,9 +242,9 @@ export const Home =()=>{
                         <a target={"_blank"} href={"https://twitter.com/i_vamaa"} rel="noreferrer" >
                             <img src={"https://cdn-icons-png.flaticon.com/512/2168/2168336.png"} alt={"twitter"}/></a>
                         <a target={"_blank"} href={"https://www.linkedin.com/in/ama-victor-55217b188/"} rel="noreferrer">
-                            img src={"https://cdn-icons-png.flaticon.com/512/1384/1384015.png"} alt={"linkedIn"}/></a>
+                            <img src={"https://cdn-icons-png.flaticon.com/512/1384/1384015.png"} alt={"linkedIn"}/></a>
                         <a target={"_blank"} href={"https://github.com/amavictor"} rel="noreferrer">
-                            img src={"https://cdn-icons-png.flaticon.com/512/2111/2111432.png"} alt={"Github"}/></a>
+                            <img src={"https://cdn-icons-png.flaticon.com/512/2111/2111432.png"} alt={"Github"}/></a>
 
                     </div>
                 </div>
