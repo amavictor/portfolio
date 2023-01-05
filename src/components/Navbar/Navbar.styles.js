@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 import {motion} from "framer-motion";
 import MenuIcon from '@mui/icons-material/Menu';
 export const Navigation = styled(motion.nav)`
@@ -20,7 +20,7 @@ export const Navigation = styled(motion.nav)`
     justify-content: space-between;
     width: 100%;
     list-style: none;
-    flex-flow: row nowrap;
+    flex-wrap: wrap;
    
     section{
     
@@ -29,20 +29,9 @@ export const Navigation = styled(motion.nav)`
       justify-content: center;
       gap: 20px;
     }
-    div{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      
-       @media only screen and (max-width: 912px){
-          display:none;
-        }
-      
-      li{
-        font-size: 1.2rem;
-        font-weight: 700;
-      }
+
+    div:first-child{
+      display: none;
     }
   }
   
@@ -63,4 +52,41 @@ export const Menu= styled(MenuIcon)`
   @media only screen and (max-width: 912px){
     display: inline-block !important;
   }
+`
+export const Links = styled.div`
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      
+      ${
+            props=>props.mobile==="true" && css`
+                  display: block !important;
+                  width: 100vw;
+                  height: 40vh;
+                  text-align: center;
+                  padding: 40% 0;
+                  position: relative;
+                  margin-top: 40px;
+                  z-index: 100;
+                  background: rgba(255, 255, 255, 0.18);
+                  border-radius: 16px;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  backdrop-filter: blur(4.3px);
+                  -webkit-backdrop-filter: blur(4.3px);
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+            `
+      }
+
+      li {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+      }
+
+      @media only screen and (max-width: 912px) {
+            display: none;
+      }
+
 `
