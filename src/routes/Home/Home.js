@@ -1,13 +1,15 @@
-import {motion, useInView, useMotionValue, useScroll, useTransform, useViewportScroll} from "framer-motion";
+import {motion,useScroll, useTransform} from "framer-motion";
 import {
-    Black,
+
     Cursor, Footer,
     Intro,
     Intro2,
     Main,
-    Mark, Project1, ProjectGrid, ProjectIntro,
-    Projects, ScrollZoom,
-    SecondIntro, Selection, Talk,
+    Mark,
+    ProjectIntro,
+    Projects,
+    SecondIntro,
+    Talk,
 
 } from "./Home.styles";
 import Screen1 from "../../Assest/images/Harkins/screen1.png"
@@ -17,7 +19,6 @@ import Screen4 from "../../Assest/images/Harkins/harkinMobile.png"
 import Vac1 from "../../Assest/images/vaclab/vac1.png"
 import Vac2 from "../../Assest/images/vaclab/vac2.png"
 import Vac3 from "../../Assest/images/vaclab/vac3.png"
-import Vac4 from "../../Assest/images/vaclab/vac4.png"
 import VacMobile from "../../Assest/images/vaclab/vacMobile.png"
 import Msg1 from "../../Assest/images/messenger/mes1.png"
 import Msg2 from "../../Assest/images/messenger/mes2.png"
@@ -39,7 +40,6 @@ import Cartoon2 from "../../Assest/images/Cartoon2.jpg"
 import Ui from "../../Assest/images/ui.jpg"
 import {useEffect, useRef, useState} from "react"
 import {ProjectCard} from "../../components/project card/ProjectCard";
-import {Link} from "react-router-dom";
 
 
 
@@ -56,31 +56,6 @@ export const Home =()=>{
         y:0
     })
     const [cursorVariant, setCursorVariant] = useState("default")
-
-     const projects=[
-        {
-            img:[`${Screen1}`,`${Screen2}`,`${Screen3}`,`${Screen4}` ],
-            title: "Harkins movie app",
-            description: "A movie trailer site that gives information on the latest movies, and tv shows. " +
-                "get access to movie trailer and clips. Built with React, Firebase, TMDB etc...",
-        },
-        {
-            img:[`${Vac1}`,`${Vac2}`,`${Vac4}`,`${VacMobile}` ],
-            title: "Vaclab",
-            description: "A movie trailer site that gives information on the latest movies, and tv shows. " +
-                "get access to movie trailer and clips. Built with React, Firebase, TMDB etc...",
-        },
-        {
-            img:[`${Screen1}`,`${Screen2}`,`${Screen3}` ],
-            title: "Harkins movie app",
-            description: "A movie trailer site that gives information on the latest movies, and tv shows. " +
-                "get access to movie trailer and clips. Built with React, Firebase, TMDB etc...",
-        },
-        {
-            img:[`${Screen1}`,`${Screen2}`,`${Screen3}` ],
-            title: "Harkins movie app"
-        },
-    ]
 
     useEffect(()=>{
         const mouseMove=(e)=>{
@@ -184,6 +159,7 @@ export const Home =()=>{
            </Intro>
 
             <Mark>
+                {/* eslint-disable-next-line jsx-a11y/no-distracting-elements */}
                 <marquee behavior={"scroll"} direction={"left"} scrollamount={"12"}>
                     FRONT END DEVELOPER | GRAPHICS DESIGNER | VIDEO EDITOR | CROSS-PLATFORM MOBILE DEVELOPER
                 </marquee>
@@ -217,33 +193,39 @@ export const Home =()=>{
                                  title={"Harkins movie app"}
                                  description={"A movie trailer site that gives information on the latest movies, and tv shows. " +
                                      "get access to movie trailer and clips. Built with React, Firebase, TMDB etc..."}
+                                 link={""}
                     />
                     <ProjectCard image={[Vac1,Vac2,Vac3,VacMobile]}
                                  title={"Vaclab"}
                                  description={"A movie trailer site that gives information on the latest movies, and tv shows. " +
                                      "get access to movie trailer and clips. Built with React, Firebase, TMDB etc..."}
+                                 link={""}
                     />
                     <ProjectCard
                         image={[Msg1,Msg2,Msg3]}
                         title={"Messenger App"}
                         description={"This is a messennger application that allows user to easily chat and connect with " +
                             "other friends using the app."}
+                        link={""}
                     />
                     <ProjectCard
                         image={[trip1,trip2,trip3]}
                         title={"Trip Global"}
                         description={"Freelance work done for a logistic company in need of online presence."}
+                        link={"trip-global.netlify.app"}
                     />
                     <ProjectCard
                         image={[Exp1,Exp2,Exp3]}
                         title={"Expensify"}
                         description={"Shopping list web app to easily track your shopping item while being able" +
                             "to categorize them."}
+                        link={"https://shopnlist.netlify.app"}
                     />
                     <ProjectCard
                         image={[Shop1,Shop2,Shop3]}
                         title={"Kings Collection"}
                         description={"An ecommerce clothing site. Built using react, redux, and firebase"}
+                        link={"https://kingscollection.netlify.app"}
                     />
                 </div>
 
@@ -257,8 +239,13 @@ export const Home =()=>{
                             <Talk to={"/contact"}>Talk now</Talk>
                     </div>
                     <div>
-                        <a target={"_blank"} href={"https://twitter.com/i_vamaa"} rel="noreferrer" ><img src={"https://cdn-icons-png.flaticon.com/512/2168/2168336.png"} alt={"twitter"}/></a>
-                        <a target={"_blank"} href={"https://www.instagram.com/i_v.amaa/"} rel="noreferrer"><img src={"https://cdn-icons-png.flaticon.com/512/1384/1384015.png"}/></a>
+                        <a target={"_blank"} href={"https://twitter.com/i_vamaa"} rel="noreferrer" >
+                            <img src={"https://cdn-icons-png.flaticon.com/512/2168/2168336.png"} alt={"twitter"}/></a>
+                        <a target={"_blank"} href={"https://www.linkedin.com/in/ama-victor-55217b188/"} rel="noreferrer">
+                            img src={"https://cdn-icons-png.flaticon.com/512/1384/1384015.png"} alt={"linkedIn"}/></a>
+                        <a target={"_blank"} href={"https://github.com/amavictor"} rel="noreferrer">
+                            img src={"https://cdn-icons-png.flaticon.com/512/2111/2111432.png"} alt={"Github"}/></a>
+
                     </div>
                 </div>
 

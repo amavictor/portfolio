@@ -1,14 +1,12 @@
 import "./ProjectCard.styles"
 import {CardBody, Item} from "./ProjectCard.styles";
-import {motion, useInView, useScroll, useTransform, useViewportScroll} from "framer-motion";
+import {motion, useScroll, useTransform} from "framer-motion";
 
-import {useEffect, useRef, useState} from "react";
-import {Link} from "react-router-dom";
+import {useRef} from "react";
 
-export const ProjectCard = ({image, title, description}) => {
+export const ProjectCard = ({image, title, description, link}) => {
     const zoomRef = useRef()
     const projectRef = useRef(null)
-    const isInView = useInView(projectRef)
     const {scrollYProgress} = useScroll(
         {
             target: zoomRef,
@@ -56,7 +54,7 @@ export const ProjectCard = ({image, title, description}) => {
                 {window.innerWidth<=800 ?
                     <motion.div
                     >
-                        <a href="https://kingscollection.netlify.app/" target={"_blank"} rel="noreferrer">
+                        <a href={`${link}`} target={"_blank"} rel="noreferrer">
 
                             {
                                 image.map((item,index) => <img id={index} alt={index} src={item}/>)
@@ -72,7 +70,7 @@ export const ProjectCard = ({image, title, description}) => {
                             x: shiftLeft,
                         }}
                     >
-                        <a href="https://kingscollection.netlify.app/" target={"_blank"} rel="noreferrer">
+                        <a href={`${link}`} target={"_blank"} rel="noreferrer">
 
                             {
                                 image.map((item,index) => <img id={index} alt={index} src={item}/>)
